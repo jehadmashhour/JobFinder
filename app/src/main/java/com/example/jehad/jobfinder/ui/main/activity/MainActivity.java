@@ -124,7 +124,7 @@ public class MainActivity extends BaseActivity implements OnItemClickListener {
      */
     @Override
     public void onClick(View view, int position, Object o) {
-        JobDetailsActivity.createIntent(this, o);
+        startActivity(JobDetailsActivity.createIntent(this, o));
     }
 
     @Override
