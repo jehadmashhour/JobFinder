@@ -1,6 +1,6 @@
 package com.example.jehad.jobfinder.data;
 
-import com.example.jehad.jobfinder.ui.main.dialogs.FilterBaseCustomViewAlertDialog;
+import com.example.jehad.jobfinder.ui.main.dialogs.FilterCustomViewAlertDialog;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -16,37 +16,37 @@ public class FilterCustomViewAlertDialogTest {
 
     @Test
     public void testValidationProviderCheckbox() {
-        FilterBaseCustomViewAlertDialog filterBaseCustomViewAlertDialog = Mockito.mock(FilterBaseCustomViewAlertDialog.class);
-        when(filterBaseCustomViewAlertDialog.isProviderCheckBoxChecked()).thenReturn(false);
-        assertEquals(false, filterBaseCustomViewAlertDialog.isFieldsValid());
+        FilterCustomViewAlertDialog filterCustomViewAlertDialog = Mockito.mock(FilterCustomViewAlertDialog.class);
+        when(filterCustomViewAlertDialog.isProviderCheckBoxChecked()).thenReturn(false);
+        assertEquals(false, filterCustomViewAlertDialog.isFieldsValid());
     }
 
     @Test
     public void testValidationPositionCheckbox() {
-        FilterBaseCustomViewAlertDialog filterBaseCustomViewAlertDialog = Mockito.mock(FilterBaseCustomViewAlertDialog.class);
-        when(filterBaseCustomViewAlertDialog.isLocationCheckBoxChecked()).thenReturn(false);
-        assertEquals(false, filterBaseCustomViewAlertDialog.isFieldsValid());
+        FilterCustomViewAlertDialog filterCustomViewAlertDialog = Mockito.mock(FilterCustomViewAlertDialog.class);
+        when(filterCustomViewAlertDialog.isLocationCheckBoxChecked()).thenReturn(false);
+        assertEquals(false, filterCustomViewAlertDialog.isFieldsValid());
     }
 
     @Test
     public void testValidationLocationCheckbox() {
-        FilterBaseCustomViewAlertDialog filterBaseCustomViewAlertDialog = Mockito.mock(FilterBaseCustomViewAlertDialog.class);
-        when(filterBaseCustomViewAlertDialog.isLocationCheckBoxChecked()).thenReturn(true);
-        assertEquals(false, filterBaseCustomViewAlertDialog.isFieldsValid());
+        FilterCustomViewAlertDialog filterCustomViewAlertDialog = Mockito.mock(FilterCustomViewAlertDialog.class);
+        when(filterCustomViewAlertDialog.isLocationCheckBoxChecked()).thenReturn(true);
+        assertEquals(false, filterCustomViewAlertDialog.isFieldsValid());
     }
 
     @Test
     public void testValidationPositionEditText() {
-        FilterBaseCustomViewAlertDialog filterBaseCustomViewAlertDialog = Mockito.mock(FilterBaseCustomViewAlertDialog.class);
-        when(filterBaseCustomViewAlertDialog.getPositionEditText()).thenReturn("");
-        assertEquals(false , filterBaseCustomViewAlertDialog.isFieldsValid());
+        FilterCustomViewAlertDialog filterCustomViewAlertDialog = Mockito.mock(FilterCustomViewAlertDialog.class);
+        when(filterCustomViewAlertDialog.getPositionEditText()).thenReturn("");
+        assertEquals(false , filterCustomViewAlertDialog.isFieldsValid());
     }
 
     @Test
     public void testValidationLocationEditText() {
-        FilterBaseCustomViewAlertDialog filterBaseCustomViewAlertDialog = Mockito.mock(FilterBaseCustomViewAlertDialog.class);
-        when(filterBaseCustomViewAlertDialog.getLocationEditText()).thenReturn(null);
-        assertEquals(false ,filterBaseCustomViewAlertDialog.isFieldsValid());
+        FilterCustomViewAlertDialog filterCustomViewAlertDialog = Mockito.mock(FilterCustomViewAlertDialog.class);
+        when(filterCustomViewAlertDialog.getLocationEditText()).thenReturn(null);
+        assertEquals(false , filterCustomViewAlertDialog.isFieldsValid());
     }
 
 

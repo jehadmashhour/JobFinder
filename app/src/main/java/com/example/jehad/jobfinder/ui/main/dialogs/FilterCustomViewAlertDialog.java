@@ -35,7 +35,7 @@ import butterknife.OnClick;
 /**
  * The responsible class on the filtration logic inside the filter dialog
  */
-public class FilterBaseCustomViewAlertDialog extends BaseCustomViewAlertDialog {
+public class FilterCustomViewAlertDialog extends BaseCustomViewAlertDialog {
 
     @BindView(R.id.sp_provider)
     Spinner providerSpinner;
@@ -56,24 +56,24 @@ public class FilterBaseCustomViewAlertDialog extends BaseCustomViewAlertDialog {
     private QueryFilter queryFilter = new QueryFilter();
     private Place place;
 
-    public FilterBaseCustomViewAlertDialog(Context mContext, int viewId, int themeResId, boolean isShowKeyboard, boolean isCancelable, OnFilterListener onFilterListener) {
+    public FilterCustomViewAlertDialog(Context mContext, int viewId, int themeResId, boolean isShowKeyboard, boolean isCancelable, OnFilterListener onFilterListener) {
         super(mContext, viewId, themeResId, isShowKeyboard, isCancelable);
         this.onFilterListener = onFilterListener;
         initializer();
     }
 
-    private FilterBaseCustomViewAlertDialog(Context mContext, int viewId, boolean isShowKeyboard, boolean isCancelable, OnFilterListener onFilterListener) {
+    private FilterCustomViewAlertDialog(Context mContext, int viewId, boolean isShowKeyboard, boolean isCancelable, OnFilterListener onFilterListener) {
         super(mContext, viewId, isShowKeyboard, isCancelable);
         this.onFilterListener = onFilterListener;
         initializer();
     }
 
-    public static FilterBaseCustomViewAlertDialog getInstance(@NonNull Context mContext, boolean showKeyboard, boolean isCancelable, OnFilterListener onFilterListener) {
-        return new FilterBaseCustomViewAlertDialog(mContext, R.layout.dialog_filter, showKeyboard, isCancelable, onFilterListener);
+    public static FilterCustomViewAlertDialog getInstance(@NonNull Context mContext, boolean showKeyboard, boolean isCancelable, OnFilterListener onFilterListener) {
+        return new FilterCustomViewAlertDialog(mContext, R.layout.dialog_filter, showKeyboard, isCancelable, onFilterListener);
     }
 
-    public static FilterBaseCustomViewAlertDialog getInstance(@NonNull Context mContext, @StyleRes int themeResId, boolean showKeyboard, boolean isCancelable, OnFilterListener onFilterListener) {
-        return new FilterBaseCustomViewAlertDialog(mContext, R.layout.dialog_filter, themeResId, showKeyboard, isCancelable, onFilterListener);
+    public static FilterCustomViewAlertDialog getInstance(@NonNull Context mContext, @StyleRes int themeResId, boolean showKeyboard, boolean isCancelable, OnFilterListener onFilterListener) {
+        return new FilterCustomViewAlertDialog(mContext, R.layout.dialog_filter, themeResId, showKeyboard, isCancelable, onFilterListener);
     }
 
     @Override
@@ -91,7 +91,7 @@ public class FilterBaseCustomViewAlertDialog extends BaseCustomViewAlertDialog {
     }
 
     @Override
-    public FilterBaseCustomViewAlertDialog show() {
+    public FilterCustomViewAlertDialog show() {
         super.show();
         return this;
 

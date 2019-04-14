@@ -6,16 +6,19 @@ import android.widget.ProgressBar;
 import com.example.jehad.jobfinder.base.BaseRecyclerViewAdapter;
 import com.example.jehad.jobfinder.base.BaseViewHolder;
 import com.example.jehad.jobfinder.data.model.filter.QueryFilter;
+import com.example.jehad.jobfinder.data.rest.ProviderStrategies;
 
 /**
  * The base class for every Provider
  */
 public abstract class BaseProvider {
     private String name;
+    private ProviderStrategies.ProviderType providerType;
 
 
-    public BaseProvider(String name) {
+    public BaseProvider(String name, ProviderStrategies.ProviderType providerType) {
         this.name = name;
+        this.providerType = providerType;
     }
 
     /**
@@ -32,6 +35,9 @@ public abstract class BaseProvider {
         return this.name;
     }
 
+    public ProviderStrategies.ProviderType getProviderType() {
+        return providerType;
+    }
     /**
      * Show the list for this Provider
      *

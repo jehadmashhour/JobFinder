@@ -9,6 +9,7 @@ import com.example.jehad.jobfinder.data.model.filter.QueryFilter;
 import com.example.jehad.jobfinder.data.rest.ApiClient;
 import com.example.jehad.jobfinder.data.rest.ApiProviderInterface;
 import com.example.jehad.jobfinder.data.rest.ProviderApiRepository;
+import com.example.jehad.jobfinder.data.rest.ProviderStrategies;
 import com.example.jehad.jobfinder.ui.main.viewholder.SearchGovViewHolder;
 
 public class SearchGovProvider extends BaseProvider {
@@ -16,9 +17,8 @@ public class SearchGovProvider extends BaseProvider {
     private Class<? extends ApiProviderInterface.SearchGov> searchGovInterface;
     private ApiProviderInterface.SearchGov api;
 
-    public SearchGovProvider(String name, Class<? extends SearchGovViewHolder> searchViewHolderClass
-            , Class<? extends ApiProviderInterface.SearchGov> searchGovInterface) {
-        super(name);
+    public SearchGovProvider(String name, ProviderStrategies.ProviderType providerType, Class<? extends SearchGovViewHolder> searchViewHolderClass, Class<? extends ApiProviderInterface.SearchGov> searchGovInterface) {
+        super(name, providerType);
         this.searchViewHolderClass = searchViewHolderClass;
         this.searchGovInterface = searchGovInterface;
         this.api = ApiClient.getClient().create(searchGovInterface);

@@ -9,6 +9,7 @@ import com.example.jehad.jobfinder.data.model.filter.QueryFilter;
 import com.example.jehad.jobfinder.data.rest.ApiClient;
 import com.example.jehad.jobfinder.data.rest.ApiProviderInterface;
 import com.example.jehad.jobfinder.data.rest.ProviderApiRepository;
+import com.example.jehad.jobfinder.data.rest.ProviderStrategies;
 import com.example.jehad.jobfinder.ui.main.viewholder.GitHubViewHolder;
 
 
@@ -17,8 +18,8 @@ public class GithubProvider extends BaseProvider {
     private Class<? extends ApiProviderInterface.Github> githubInterface;
     private ApiProviderInterface.Github api;
 
-    public GithubProvider(String name, Class<? extends GitHubViewHolder> githubViewHolderClass, Class<? extends ApiProviderInterface.Github> githubInterface) {
-        super(name);
+    public GithubProvider(String name, ProviderStrategies.ProviderType providerType, Class<? extends GitHubViewHolder> githubViewHolderClass, Class<? extends ApiProviderInterface.Github> githubInterface) {
+        super(name, providerType);
         this.githubViewHolderClass = githubViewHolderClass;
         this.githubInterface = githubInterface;
         this.api = ApiClient.getClient().create(githubInterface);

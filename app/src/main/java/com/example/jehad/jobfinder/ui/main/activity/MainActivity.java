@@ -18,7 +18,7 @@ import com.example.jehad.jobfinder.data.model.filter.QueryFilter;
 import com.example.jehad.jobfinder.data.rest.ProviderStrategies;
 import com.example.jehad.jobfinder.ui.details.JobDetailsActivity;
 import com.example.jehad.jobfinder.ui.main.adapter.JobsAdapter;
-import com.example.jehad.jobfinder.ui.main.dialogs.FilterBaseCustomViewAlertDialog;
+import com.example.jehad.jobfinder.ui.main.dialogs.FilterCustomViewAlertDialog;
 import com.example.jehad.jobfinder.callback.OnFilterListener;
 import com.example.jehad.jobfinder.callback.OnItemClickListener;
 import com.example.jehad.jobfinder.util.DataTypeUtils;
@@ -39,7 +39,7 @@ public class MainActivity extends BaseActivity implements OnItemClickListener {
     ProgressBar progressBar;
 
     private JobsAdapter jobsAdapter;
-    private FilterBaseCustomViewAlertDialog filterCustomViewDialog;
+    private FilterCustomViewAlertDialog filterCustomViewDialog;
 
     @Override
     protected int layoutRes() {
@@ -77,6 +77,7 @@ public class MainActivity extends BaseActivity implements OnItemClickListener {
 
     /**
      * Show all the jobs list
+     *
      * @param queryFilter the selected Query Filter Object
      */
     private void showAllJobsList(QueryFilter queryFilter) {
@@ -85,12 +86,13 @@ public class MainActivity extends BaseActivity implements OnItemClickListener {
 
     /**
      * Do filtering on the jobs list
+     *
      * @param queryFilter the selected Query Filter Object
      */
     private void doFilter(QueryFilter queryFilter) {
 
         if (!DataTypeUtils.isNull(queryFilter.getBaseProvider())) {
-            queryFilter.getBaseProvider().showList(this, jobsAdapter, progressBar, queryFilter);
+            ProviderStrategies.showOneJobsList(this, jobsAdapter, progressBar, queryFilter);
         } else {
             showAllJobsList(queryFilter);
         }
@@ -101,7 +103,7 @@ public class MainActivity extends BaseActivity implements OnItemClickListener {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.filter:
-                filterCustomViewDialog = FilterBaseCustomViewAlertDialog.getInstance(this, R.style.CustomDialog, true, true, new OnFilterListener() {
+                filterCustomViewDialog = FilterCustomViewAlertDialog.getInstance(this, R.style.CustomDialog, true, true, new OnFilterListener() {
                     @Override
                     public void onDone(QueryFilter queryFilter) {
                         jobsAdapter.clearList();
@@ -118,6 +120,7 @@ public class MainActivity extends BaseActivity implements OnItemClickListener {
 
     /**
      * On click on one item of the adapter jobs items
+     *
      * @param view
      * @param position
      * @param o
