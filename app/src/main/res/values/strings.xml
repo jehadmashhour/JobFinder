@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">JobFinder</string>
+    <string name="job_title">Job title</string>
+    <string name="company_name">Company name</string>
+    <string name="location">Location</string>
+    <string name="postdate">Postdate</string>
+    <string name="filter">Filter</string>
+    <string name="cancel">Cancel</string>
+    <string name="done">Done</string>
+    <string name="provider">Provider</string>
+    <string name="position">Position</string>
+    <string name="please_fill_provider_field">Please fill the provider field</string>
+    <string name="please_fill_position_field">Please fill the position field</string>
+    <string name="please_fill_location_field">Please fill the location field</string>
+    <string name="please_fill_fields">Please fill the fields</string>
+</resources>
