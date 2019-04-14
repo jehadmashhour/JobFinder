@@ -7,7 +7,7 @@ import android.widget.TextView;
 
 import com.example.jehad.jobfinder.R;
 import com.example.jehad.jobfinder.base.BaseViewHolder;
-import com.example.jehad.jobfinder.test.model.job.GitHubJob;
+import com.example.jehad.jobfinder.data.model.job.GitHubJob;
 import com.example.jehad.jobfinder.callback.OnItemClickListener;
 import com.example.jehad.jobfinder.util.DateTimeUtils;
 import com.example.jehad.jobfinder.util.GlideImageDownloaderUtil;

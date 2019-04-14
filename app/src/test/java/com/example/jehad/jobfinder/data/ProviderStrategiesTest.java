@@ -1,8 +1,8 @@
-package com.example.jehad.jobfinder.test;
+package com.example.jehad.jobfinder.data;
 
-import com.example.jehad.jobfinder.test.model.provider.GithubProvider;
-import com.example.jehad.jobfinder.test.model.provider.SearchGovProvider;
-import com.example.jehad.jobfinder.test.rest.ProviderStrategies;
+import com.example.jehad.jobfinder.data.model.provider.GithubProvider;
+import com.example.jehad.jobfinder.data.model.provider.SearchGovProvider;
+import com.example.jehad.jobfinder.data.rest.ProviderStrategies;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

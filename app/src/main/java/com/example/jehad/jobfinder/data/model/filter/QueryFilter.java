@@ -1,6 +1,6 @@
-package com.example.jehad.jobfinder.test.model.filter;
+package com.example.jehad.jobfinder.data.model.filter;
 
-import com.example.jehad.jobfinder.test.model.provider.BaseProvider;
+import com.example.jehad.jobfinder.data.model.provider.BaseProvider;
 import com.example.jehad.jobfinder.util.DataTypeUtils;
 import com.google.android.gms.maps.model.LatLng;
 

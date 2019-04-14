@@ -1,10 +1,10 @@
-package com.example.jehad.jobfinder.test.model.job;
+package com.example.jehad.jobfinder.data.model.job;
 
 import java.util.List;
 
 import javax.annotation.Generated;
 
-import com.example.jehad.jobfinder.test.rest.ProviderStrategies;
+import com.example.jehad.jobfinder.data.rest.ProviderStrategies;
 import com.google.gson.annotations.SerializedName;
 
 @Generated("com.robohorse.robopojogenerator")

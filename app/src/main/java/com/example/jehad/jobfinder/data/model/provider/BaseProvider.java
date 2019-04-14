@@ -1,11 +1,11 @@
-package com.example.jehad.jobfinder.test.model.provider;
+package com.example.jehad.jobfinder.data.model.provider;
 
 import android.content.Context;
 import android.widget.ProgressBar;
 
 import com.example.jehad.jobfinder.base.BaseRecyclerViewAdapter;
 import com.example.jehad.jobfinder.base.BaseViewHolder;
-import com.example.jehad.jobfinder.test.model.filter.QueryFilter;
+import com.example.jehad.jobfinder.data.model.filter.QueryFilter;
 
 /**
  * The base class for every Provider

@@ -1,12 +1,9 @@
-package com.example.jehad.jobfinder.test;
+package com.example.jehad.jobfinder.data;
 
 import com.example.jehad.jobfinder.ui.main.dialogs.FilterBaseCustomViewAlertDialog;
 
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.junit.runners.JUnit4;
-import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnitRunner;
 

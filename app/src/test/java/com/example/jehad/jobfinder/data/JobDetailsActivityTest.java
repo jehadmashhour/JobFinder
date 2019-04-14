@@ -1,7 +1,7 @@
-package com.example.jehad.jobfinder.test;
+package com.example.jehad.jobfinder.data;
 
 import com.example.jehad.jobfinder.BuildConfig;
-import com.example.jehad.jobfinder.test.model.job.GitHubJob;
+import com.example.jehad.jobfinder.data.model.job.GitHubJob;
 import com.example.jehad.jobfinder.ui.details.JobDetailsActivity;
 
 import org.junit.Before;

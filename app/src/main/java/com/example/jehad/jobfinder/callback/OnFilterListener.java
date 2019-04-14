@@ -1,6 +1,6 @@
 package com.example.jehad.jobfinder.callback;
 
-import com.example.jehad.jobfinder.test.model.filter.QueryFilter;
+import com.example.jehad.jobfinder.data.model.filter.QueryFilter;
 
 
 public interface OnFilterListener {

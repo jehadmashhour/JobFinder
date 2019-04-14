@@ -1,6 +1,6 @@
-package com.example.jehad.jobfinder.test.model.job;
+package com.example.jehad.jobfinder.data.model.job;
 
-import com.example.jehad.jobfinder.test.rest.ProviderStrategies;
+import com.example.jehad.jobfinder.data.rest.ProviderStrategies;
 
 import java.io.Serializable;
 

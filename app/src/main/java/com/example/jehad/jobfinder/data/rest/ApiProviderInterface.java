@@ -1,7 +1,7 @@
-package com.example.jehad.jobfinder.test.rest;
+package com.example.jehad.jobfinder.data.rest;
 
-import com.example.jehad.jobfinder.test.model.job.GitHubJob;
-import com.example.jehad.jobfinder.test.model.job.SearchGovJob;
+import com.example.jehad.jobfinder.data.model.job.GitHubJob;
+import com.example.jehad.jobfinder.data.model.job.SearchGovJob;
 
 import java.util.List;
 

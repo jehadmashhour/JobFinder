@@ -6,7 +6,7 @@ import android.widget.TextView;
 
 import com.example.jehad.jobfinder.R;
 import com.example.jehad.jobfinder.base.BaseViewHolder;
-import com.example.jehad.jobfinder.test.model.job.SearchGovJob;
+import com.example.jehad.jobfinder.data.model.job.SearchGovJob;
 import com.example.jehad.jobfinder.callback.OnItemClickListener;
 import com.example.jehad.jobfinder.util.DateTimeUtils;
 

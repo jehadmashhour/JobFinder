@@ -1,13 +1,13 @@
-package com.example.jehad.jobfinder.test.rest;
+package com.example.jehad.jobfinder.data.rest;
 
 import android.content.Context;
 import android.widget.ProgressBar;
 
 import com.example.jehad.jobfinder.base.BaseRecyclerViewAdapter;
-import com.example.jehad.jobfinder.test.model.filter.QueryFilter;
-import com.example.jehad.jobfinder.test.model.provider.BaseProvider;
-import com.example.jehad.jobfinder.test.model.provider.GithubProvider;
-import com.example.jehad.jobfinder.test.model.provider.SearchGovProvider;
+import com.example.jehad.jobfinder.data.model.filter.QueryFilter;
+import com.example.jehad.jobfinder.data.model.provider.BaseProvider;
+import com.example.jehad.jobfinder.data.model.provider.GithubProvider;
+import com.example.jehad.jobfinder.data.model.provider.SearchGovProvider;
 import com.example.jehad.jobfinder.ui.main.viewholder.GitHubViewHolder;
 import com.example.jehad.jobfinder.ui.main.viewholder.SearchGovViewHolder;
 

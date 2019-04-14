@@ -15,9 +15,9 @@ import android.widget.Toast;
 import com.example.jehad.jobfinder.R;
 import com.example.jehad.jobfinder.base.BaseActivity;
 import com.example.jehad.jobfinder.constants.Tags;
-import com.example.jehad.jobfinder.test.model.job.BaseJob;
-import com.example.jehad.jobfinder.test.model.job.GitHubJob;
-import com.example.jehad.jobfinder.test.model.job.SearchGovJob;
+import com.example.jehad.jobfinder.data.model.job.BaseJob;
+import com.example.jehad.jobfinder.data.model.job.GitHubJob;
+import com.example.jehad.jobfinder.data.model.job.SearchGovJob;
 import com.example.jehad.jobfinder.util.ToastUtils;
 
 

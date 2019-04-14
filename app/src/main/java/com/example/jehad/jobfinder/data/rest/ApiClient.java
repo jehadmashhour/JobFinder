@@ -1,4 +1,4 @@
-package com.example.jehad.jobfinder.test.rest;
+package com.example.jehad.jobfinder.data.rest;
 
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
