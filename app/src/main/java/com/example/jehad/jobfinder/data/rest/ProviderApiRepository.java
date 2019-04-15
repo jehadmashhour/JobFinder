@@ -21,12 +21,11 @@ import retrofit2.Response;
 /**
  * The Repository Class for get the jobs from every Provider.
  */
-public class ProviderApiRepository {
+public class ProviderApiRepository extends BaseProviderApiRepositoryUtils {
 
-    public static void getGitHubJobList(final Context context, final BaseRecyclerViewAdapter baseRecyclerViewAdapter, final ProgressBar progressBar, QueryFilter queryFilter, ApiProviderInterface.Github apiProviderGithub) {
-        if (!DataTypeUtils.isNull(progressBar)) {
-            progressBar.setVisibility(View.VISIBLE);
-        }
+    public static void getGitHubJobList(final Context context, QueryFilter queryFilter, ApiProviderInterface.Github apiProviderGithub) {
+        getBaseActivity(context).onBegin();
+
         apiProviderGithub.getGitHubJobList(
                 !DataTypeUtils.isNullOrEmpty(queryFilter.getPosition()) ? queryFilter.getPosition() : null,
                 !DataTypeUtils.isNull(queryFilter.getLatLng()) ? queryFilter.getLatLng().latitude : null,
@@ -34,51 +33,34 @@ public class ProviderApiRepository {
                 .enqueue(new Callback<List<GitHubJob>>() {
                     @Override
                     public void onResponse(Call<List<GitHubJob>> call, Response<List<GitHubJob>> response) {
-                        if (!DataTypeUtils.isNull(baseRecyclerViewAdapter)) {
-                            baseRecyclerViewAdapter.updateList(response.body());
-                        }
-
-                        if (!DataTypeUtils.isNull(progressBar)) {
-                            progressBar.setVisibility(View.GONE);
-                        }
+                        getBaseActivity(context).onResponse(call, response);
                     }
 
                     @Override
                     public void onFailure(Call<List<GitHubJob>> call, Throwable t) {
                         ToastUtils.showToast(context, t.getMessage(), Toast.LENGTH_SHORT);
-                        if (!DataTypeUtils.isNull(progressBar)) {
-                            progressBar.setVisibility(View.GONE);
-                        }
+                        getBaseActivity(context).onFailure(call, t);
                     }
                 });
     }
 
-    public static void getSearchGovJobList(final Context context, final BaseRecyclerViewAdapter baseRecyclerViewAdapter, final ProgressBar progressBar, QueryFilter queryFilter, ApiProviderInterface.SearchGov apiProviderSearchGov) {
-        if (!DataTypeUtils.isNull(progressBar)) {
-            progressBar.setVisibility(View.VISIBLE);
-        }
+    public static void getSearchGovJobList(final Context context, QueryFilter queryFilter, ApiProviderInterface.SearchGov apiProviderSearchGov) {
+        getBaseActivity(context).onBegin();
+
         apiProviderSearchGov.getSearchGovJobList(
                 !DataTypeUtils.isNullOrEmpty(queryFilter.getPosition()) ? queryFilter.getPosition() : null,
                 !DataTypeUtils.isNullOrEmpty(queryFilter.getLatLngSum()) ? queryFilter.getLatLngSum() : null)
                 .enqueue(new Callback<List<SearchGovJob>>() {
                     @Override
                     public void onResponse(Call<List<SearchGovJob>> call, Response<List<SearchGovJob>> response) {
-                        if (!DataTypeUtils.isNull(baseRecyclerViewAdapter)) {
-                            baseRecyclerViewAdapter.updateList(response.body());
-                        }
-
-                        if (!DataTypeUtils.isNull(progressBar)) {
-                            progressBar.setVisibility(View.GONE);
-                        }
+                        getBaseActivity(context).onResponse(call, response);
 
                     }
 
                     @Override
                     public void onFailure(Call<List<SearchGovJob>> call, Throwable t) {
                         ToastUtils.showToast(context, t.getMessage(), Toast.LENGTH_SHORT);
-                        if (!DataTypeUtils.isNull(progressBar)) {
-                            progressBar.setVisibility(View.GONE);
-                        }
+                        getBaseActivity(context).onFailure(call, t);
                     }
                 });
     }

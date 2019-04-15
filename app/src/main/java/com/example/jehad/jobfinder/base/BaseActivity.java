@@ -7,13 +7,16 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 
 import com.example.jehad.jobfinder.R;
+import com.example.jehad.jobfinder.callback.OnResponseListener;
 
 import butterknife.ButterKnife;
+import retrofit2.Call;
+import retrofit2.Response;
 
 /**
  * The super class for every instance of {@link android.app.Activity} so every activity should be extend from {@link BaseActivity}
  */
-public abstract class BaseActivity extends AppCompatActivity {
+public abstract class BaseActivity extends AppCompatActivity implements OnResponseListener {
     /**
      *
      * @return Get the current activity layout res id
@@ -37,5 +40,21 @@ public abstract class BaseActivity extends AppCompatActivity {
 
     protected Context getContext() {
         return this;
+    }
+
+
+    @Override
+    public void onBegin() {
+
+    }
+
+    @Override
+    public void onResponse(Call call, Response response) {
+
+    }
+
+    @Override
+    public void onFailure(Call call, Throwable t) {
+
     }
 }

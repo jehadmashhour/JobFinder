@@ -39,8 +39,8 @@ public class GithubProvider extends BaseProvider {
     }
 
     @Override
-    public void showList(final Context context, final BaseRecyclerViewAdapter baseRecyclerViewAdapter, ProgressBar progressBar, QueryFilter queryFilter) {
-        ProviderApiRepository.getGitHubJobList(context, baseRecyclerViewAdapter, progressBar, queryFilter, getApi());
+    public void showList(final Context context, QueryFilter queryFilter) {
+        ProviderApiRepository.getGitHubJobList(context, queryFilter, getApi());
     }
 
     @Override

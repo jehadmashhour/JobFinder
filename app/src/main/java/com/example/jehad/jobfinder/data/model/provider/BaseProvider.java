@@ -42,11 +42,9 @@ public abstract class BaseProvider {
      * Show the list for this Provider
      *
      * @param context
-     * @param baseRecyclerViewAdapter
-     * @param progressBar
      * @param queryFilter
      */
-    public abstract void showList(final Context context, final BaseRecyclerViewAdapter baseRecyclerViewAdapter, ProgressBar progressBar, QueryFilter queryFilter);
+    public abstract void showList(final Context context, QueryFilter queryFilter);
 
     /**
      * Get the {@link BaseViewHolder}  for this Provider

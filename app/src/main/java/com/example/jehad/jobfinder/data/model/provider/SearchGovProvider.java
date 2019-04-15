@@ -37,8 +37,8 @@ public class SearchGovProvider extends BaseProvider {
     }
 
     @Override
-    public void showList(final Context context, final BaseRecyclerViewAdapter baseRecyclerViewAdapter, ProgressBar progressBar, QueryFilter queryFilter) {
-        ProviderApiRepository.getSearchGovJobList(context, baseRecyclerViewAdapter,progressBar, queryFilter, getApi());
+    public void showList(final Context context, QueryFilter queryFilter) {
+        ProviderApiRepository.getSearchGovJobList(context, queryFilter, getApi());
     }
 
     @Override

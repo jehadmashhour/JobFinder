@@ -43,44 +43,4 @@ public class ProviderStrategies {
         return getProviderList().get(providerType.ordinal());
     }
 
-    /**
-     * show one Job list
-     *
-     * @param context                 The current activity context
-     * @param baseRecyclerViewAdapter The current {@link BaseRecyclerViewAdapter}
-     * @param progressBar             The current {@link ProgressBar}
-     * @param queryFilter             The current {@link QueryFilter}
-     */
-    public static void showOneJobsList(final Context context, final BaseRecyclerViewAdapter baseRecyclerViewAdapter, ProgressBar progressBar, QueryFilter queryFilter) {
-        queryFilter.getBaseProvider().showList(context, baseRecyclerViewAdapter, progressBar, queryFilter);
-    }
-
-    /**
-     * show one Job list
-     *
-     * @param providerType            The current selected {@link ProviderType}
-     * @param context                 The current activity context
-     * @param baseRecyclerViewAdapter The current {@link BaseRecyclerViewAdapter}
-     * @param progressBar             The current {@link ProgressBar}
-     * @param queryFilter             The current {@link QueryFilter}
-     */
-    public static void showOneJobsList(ProviderType providerType, final Context context, final BaseRecyclerViewAdapter baseRecyclerViewAdapter, ProgressBar progressBar, QueryFilter queryFilter) {
-        getProviderList().get(providerType.ordinal()).showList(context, baseRecyclerViewAdapter, progressBar, queryFilter);
-    }
-
-    /**
-     * Show  All Jobs list
-     *
-     * @param context                 The current activity context
-     * @param baseRecyclerViewAdapter The current {@link BaseRecyclerViewAdapter}
-     * @param progressBar             The current {@link ProgressBar}
-     * @param queryFilter             The current {@link QueryFilter}
-     */
-    public static void showAllJobsList(final Context context, final BaseRecyclerViewAdapter baseRecyclerViewAdapter, ProgressBar progressBar, QueryFilter queryFilter) {
-        for (BaseProvider baseProvider : getProviderList()) {
-            baseProvider.showList(context, baseRecyclerViewAdapter, progressBar, queryFilter);
-        }
-    }
-
-
 }

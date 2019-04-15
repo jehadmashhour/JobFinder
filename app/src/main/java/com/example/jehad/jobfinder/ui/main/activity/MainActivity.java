@@ -15,6 +15,7 @@ import com.example.jehad.jobfinder.R;
 import com.example.jehad.jobfinder.base.BaseActivity;
 import com.example.jehad.jobfinder.constants.RequestCodes;
 import com.example.jehad.jobfinder.data.model.filter.QueryFilter;
+import com.example.jehad.jobfinder.data.rest.ProviderApiRepository;
 import com.example.jehad.jobfinder.data.rest.ProviderStrategies;
 import com.example.jehad.jobfinder.ui.details.JobDetailsActivity;
 import com.example.jehad.jobfinder.ui.main.adapter.JobsAdapter;
@@ -25,7 +26,11 @@ import com.example.jehad.jobfinder.util.DataTypeUtils;
 import com.google.android.gms.location.places.Place;
 import com.google.android.gms.location.places.ui.PlaceAutocomplete;
 
+import java.util.List;
+
 import butterknife.BindView;
+import retrofit2.Call;
+import retrofit2.Response;
 
 /**
  * The responsible Activity on Showing the Main Activity Jobs in {@link RecyclerView} with filtration
@@ -81,7 +86,7 @@ public class MainActivity extends BaseActivity implements OnItemClickListener {
      * @param queryFilter the selected Query Filter Object
      */
     private void showAllJobsList(QueryFilter queryFilter) {
-        ProviderStrategies.showAllJobsList(this, jobsAdapter, progressBar, queryFilter);
+        ProviderApiRepository.showAllJobsList(this, queryFilter);
     }
 
     /**
@@ -92,7 +97,7 @@ public class MainActivity extends BaseActivity implements OnItemClickListener {
     private void doFilter(QueryFilter queryFilter) {
 
         if (!DataTypeUtils.isNull(queryFilter.getBaseProvider())) {
-            ProviderStrategies.showOneJobsList(this, jobsAdapter, progressBar, queryFilter);
+            ProviderApiRepository.showOneJobsList(this, queryFilter);
         } else {
             showAllJobsList(queryFilter);
         }
@@ -141,5 +146,24 @@ public class MainActivity extends BaseActivity implements OnItemClickListener {
                 }
                 break;
         }
+    }
+
+    @Override
+    public void onBegin() {
+        progressBar.setVisibility(View.VISIBLE);
+        super.onBegin();
+    }
+
+    @Override
+    public void onResponse(Call call, Response response) {
+        jobsAdapter.updateList((List) response.body());
+        progressBar.setVisibility(View.GONE);
+        super.onResponse(call, response);
+    }
+
+    @Override
+    public void onFailure(Call call, Throwable t) {
+        super.onFailure(call, t);
+        progressBar.setVisibility(View.GONE);
     }
 }
