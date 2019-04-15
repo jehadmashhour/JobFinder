@@ -10,6 +10,11 @@ import static com.example.jehad.jobfinder.data.rest.ProviderStrategies.getProvid
 
 public class BaseProviderApiRepositoryUtils {
 
+    /**
+     *
+     * @param context The current activity context
+     * @return The BaseActivity from the Context
+     */
     static BaseActivity getBaseActivity(Context context) {
         return (((BaseActivity) context));
     }
