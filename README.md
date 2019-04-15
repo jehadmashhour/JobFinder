@@ -9,14 +9,14 @@ Android App for showing a jobs from there providers with filteration , adding a 
 
 
 **Libraries :**
-1) RxJava2 & RxAndroid2 : 
-   1- I used it to call restful Apis with Retrofit library .
-   2- It's permit to me to do chain multiple requests easily.
-   3- CallBack processing and tracking errors .
-   4- Used for writing asynchronous event-based reactive code by using observables .
-   5- Is useful and very powerful in the sense that it takes care of multithreading very well by doing complex thread operations .
+1) RxJava2 & RxAndroid2 : <br />
+   1- I used it to call restful Apis with Retrofit library .<br />
+   2- It's permit to me to do chain multiple requests easily.<br />
+   3- CallBack processing and tracking errors .<br />
+   4- Used for writing asynchronous event-based reactive code by using observables .<br />
+   5- Is useful and very powerful in the sense that it takes care of multithreading very well by doing complex thread operations .<br />
 2) Retrofit : 
-   To interact with the HTTP Restful Apis , it a powerful because it also as ButterKnife depends on 
+   To interact with the HTTP Restful Apis , it a powerful because it also as ButterKnife depends on <br />
    the Auto Generated code by implementing the Annotation proccess logic
 3) ButterKnife : 
    It's permit to me to bind the XML views with there connected fields in there classes ,
