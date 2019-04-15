@@ -66,7 +66,7 @@ Android App for showing a jobs from there providers with filteration , adding a 
       loop on the predefined providers list  & execute show list method for every provider that will 
       call the provider Api from ProviderApiRepository class (I pass the Query Object as new instance witout any values inside it) <br />
       
- 3) Click on job item :<br />
+ 3) Click on a job item :<br />
       1- The main activity pass OnItemClickListener interface to the JobsAdapter , so there a click listener of the item will call OnClick 
       Callback from OnItemClickListener ,the callback implemented in the main activity will navigate the user to the 
       JobDetailsActivity by StartActivity() method & passing the url by intent extras. <br />
