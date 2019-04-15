@@ -2,7 +2,7 @@ package com.example.jehad.jobfinder.data;
 
 import com.example.jehad.jobfinder.data.model.provider.GithubProvider;
 import com.example.jehad.jobfinder.data.model.provider.SearchGovProvider;
-import com.example.jehad.jobfinder.data.rest.ProviderStrategies;
+import com.example.jehad.jobfinder.data.rest.base.ProviderStrategies;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

@@ -4,7 +4,7 @@ import java.util.List;
 
 import javax.annotation.Generated;
 
-import com.example.jehad.jobfinder.data.rest.ProviderStrategies;
+import com.example.jehad.jobfinder.data.rest.base.ProviderStrategies;
 import com.google.gson.annotations.SerializedName;
 
 @Generated("com.robohorse.robopojogenerator")

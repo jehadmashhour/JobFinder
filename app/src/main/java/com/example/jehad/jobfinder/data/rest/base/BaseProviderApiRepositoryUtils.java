@@ -1,4 +1,4 @@
-package com.example.jehad.jobfinder.data.rest;
+package com.example.jehad.jobfinder.data.rest.base;
 
 import android.content.Context;
 
@@ -6,16 +6,16 @@ import com.example.jehad.jobfinder.base.BaseActivity;
 import com.example.jehad.jobfinder.data.model.filter.QueryFilter;
 import com.example.jehad.jobfinder.data.model.provider.BaseProvider;
 
-import static com.example.jehad.jobfinder.data.rest.ProviderStrategies.getProviderList;
+import static com.example.jehad.jobfinder.data.rest.base.ProviderStrategies.getProviderList;
 
-public class BaseProviderApiRepositoryUtils {
+public abstract class BaseProviderApiRepositoryUtils {
 
     /**
      *
      * @param context The current activity context
      * @return The BaseActivity from the Context
      */
-    static BaseActivity getBaseActivity(Context context) {
+    public static BaseActivity getBaseActivity(Context context) {
         return (((BaseActivity) context));
     }
 

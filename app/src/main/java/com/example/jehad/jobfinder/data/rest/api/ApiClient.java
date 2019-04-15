@@ -1,4 +1,4 @@
-package com.example.jehad.jobfinder.data.rest;
+package com.example.jehad.jobfinder.data.rest.api;
 
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
@@ -8,7 +8,7 @@ public class ApiClient {
 
     /**
      * The entry point for Loading Restful WebService by Retrofit Library
-     * @return
+     * @return Retrofit for call Apis
      */
     public static Retrofit getClient() {
         if (retrofit == null) {

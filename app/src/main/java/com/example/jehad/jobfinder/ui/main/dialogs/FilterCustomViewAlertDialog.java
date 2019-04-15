@@ -17,7 +17,7 @@ import com.example.jehad.jobfinder.constants.RequestCodes;
 import com.example.jehad.jobfinder.base.BaseCustomViewAlertDialog;
 import com.example.jehad.jobfinder.data.model.filter.QueryFilter;
 import com.example.jehad.jobfinder.data.model.provider.BaseProvider;
-import com.example.jehad.jobfinder.data.rest.ProviderStrategies;
+import com.example.jehad.jobfinder.data.rest.base.ProviderStrategies;
 import com.example.jehad.jobfinder.callback.OnFilterListener;
 import com.example.jehad.jobfinder.util.DataTypeUtils;
 import com.example.jehad.jobfinder.util.ToastUtils;

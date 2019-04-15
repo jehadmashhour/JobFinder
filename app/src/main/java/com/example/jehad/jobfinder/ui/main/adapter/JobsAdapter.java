@@ -7,7 +7,7 @@ import com.example.jehad.jobfinder.base.BaseRecyclerViewAdapter;
 import com.example.jehad.jobfinder.base.BaseViewHolder;
 import com.example.jehad.jobfinder.data.model.job.BaseJob;
 import com.example.jehad.jobfinder.data.model.provider.BaseProvider;
-import com.example.jehad.jobfinder.data.rest.ProviderStrategies;
+import com.example.jehad.jobfinder.data.rest.base.ProviderStrategies;
 import com.example.jehad.jobfinder.callback.OnItemClickListener;
 import com.example.jehad.jobfinder.ui.main.viewholder.GitHubViewHolder;
 

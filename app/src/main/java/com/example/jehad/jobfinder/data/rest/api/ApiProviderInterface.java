@@ -1,4 +1,4 @@
-package com.example.jehad.jobfinder.data.rest;
+package com.example.jehad.jobfinder.data.rest.api;
 
 import com.example.jehad.jobfinder.data.model.job.GitHubJob;
 import com.example.jehad.jobfinder.data.model.job.SearchGovJob;
