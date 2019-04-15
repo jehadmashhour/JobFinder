@@ -28,6 +28,7 @@ import com.google.android.gms.location.places.ui.PlaceAutocomplete;
 import java.util.List;
 
 import butterknife.BindView;
+import io.reactivex.disposables.CompositeDisposable;
 import retrofit2.Call;
 import retrofit2.Response;
 
@@ -43,6 +44,7 @@ public class MainActivity extends BaseActivity implements OnItemClickListener {
     ProgressBar progressBar;
 
     private JobsAdapter jobsAdapter;
+
     private FilterCustomViewAlertDialog filterCustomViewDialog;
 
     @Override
@@ -68,6 +70,7 @@ public class MainActivity extends BaseActivity implements OnItemClickListener {
         setupRecyclerView();
         showAllJobsList(new QueryFilter());
     }
+
 
     /**
      * Setup the recycler view logic
@@ -154,15 +157,16 @@ public class MainActivity extends BaseActivity implements OnItemClickListener {
     }
 
     @Override
-    public void onResponse(Call call, Response response) {
-        jobsAdapter.updateList((List) response.body());
+    public void onResponse(Object o) {
+        super.onResponse(o);
+        jobsAdapter.updateList((List) o);
         progressBar.setVisibility(View.GONE);
-        super.onResponse(call, response);
     }
 
+
     @Override
-    public void onFailure(Call call, Throwable t) {
-        super.onFailure(call, t);
+    public void onFailure(Throwable t) {
+        super.onFailure(t);
         progressBar.setVisibility(View.GONE);
     }
 }

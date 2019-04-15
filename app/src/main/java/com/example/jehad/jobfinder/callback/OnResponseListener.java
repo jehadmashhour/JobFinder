@@ -6,7 +6,7 @@ import retrofit2.Response;
 public interface OnResponseListener<T> {
     void onBegin();
 
-    <T>void onResponse(Call<T> call, Response<T> response);
+    void onResponse(T t);
 
-    <T>void onFailure(Call<T> call, Throwable t);
+    void onFailure(Throwable t);
 }

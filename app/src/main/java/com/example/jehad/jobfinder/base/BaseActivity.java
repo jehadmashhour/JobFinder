@@ -10,6 +10,8 @@ import com.example.jehad.jobfinder.R;
 import com.example.jehad.jobfinder.callback.OnResponseListener;
 
 import butterknife.ButterKnife;
+import io.reactivex.annotations.NonNull;
+import io.reactivex.disposables.CompositeDisposable;
 import retrofit2.Call;
 import retrofit2.Response;
 
@@ -17,8 +19,8 @@ import retrofit2.Response;
  * The super class for every instance of {@link android.app.Activity} so every activity should be extend from {@link BaseActivity}
  */
 public abstract class BaseActivity extends AppCompatActivity implements OnResponseListener {
+
     /**
-     *
      * @return Get the current activity layout res id
      */
     @LayoutRes
@@ -26,6 +28,7 @@ public abstract class BaseActivity extends AppCompatActivity implements OnRespon
 
     /**
      * Using {@link ButterKnife} library to bind the view of XMl with its fields
+     *
      * @param savedInstanceState
      */
     @Override
@@ -36,12 +39,12 @@ public abstract class BaseActivity extends AppCompatActivity implements OnRespon
         initializer();
     }
 
+
     protected abstract void initializer();
 
     protected Context getContext() {
         return this;
     }
-
 
     @Override
     public void onBegin() {
@@ -49,12 +52,12 @@ public abstract class BaseActivity extends AppCompatActivity implements OnRespon
     }
 
     @Override
-    public void onResponse(Call call, Response response) {
+    public void onResponse(Object o) {
 
     }
 
     @Override
-    public void onFailure(Call call, Throwable t) {
+    public void onFailure(Throwable t) {
 
     }
 }

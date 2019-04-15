@@ -36,6 +36,11 @@ dependencies {
     implementation "com.jakewharton:butterknife:$rootProject.butterknifeVersion"
     annotationProcessor "com.jakewharton:butterknife-compiler:$rootProject.butterknifeVersion"
 
+    ///RxJavaAndroid2
+    implementation "io.reactivex.rxjava2:rxjava:$rootProject.rxjava2"
+    implementation "io.reactivex.rxjava2:rxandroid:$rootProject.rxandroid2"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$rootProject.rxjavaadapter2"
+
     ///AnnotationsImplementations
     implementation "org.glassfish:javax.annotation:$rootProject.javaxAnnotationVersion"
 

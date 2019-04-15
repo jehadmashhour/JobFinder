@@ -36,6 +36,11 @@ ext {
     ///ButterKnifeVersions
     butterknifeVersion = '8.8.1'
 
+    ///RxJavaAndroid2Versions
+    rxjava2 = '2.2.8'
+    rxandroid2 = '2.1.1'
+    rxjavaadapter2 = '2.5.0'
+
     ///AnnotationsVersions
     javaxAnnotationVersion = '10.0-b28'
 
