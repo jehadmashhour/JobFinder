@@ -9,25 +9,31 @@ Android App for showing a jobs from there providers with filteration , adding a 
 
 
 **Libraries :**
-1) ButterKnife : 
-   It's permit to me to bind the XML views with there connected fields in there classes ,
-   depends on the Auto Generated code by implementing the Annotation proccess logic .
-2) Javax :
-   It's a utils annotaions , i used it to extract the POJO classes from a JSON responce .
-3) GooglePlayServices :
-   To interact with Google Apis , i used it to show the google autocomplete locations screen .
-4) Retrofit : 
+1) RxJava2 & RxAndroid2 : 
+   1- I used it to call restful Apis with Retrofit library .
+   2- It's permit to me to do chain multiple requests easily.
+   3- CallBack processing and tracking errors .
+   4- Used for writing asynchronous event-based reactive code by using observables .
+   5- Is useful and very powerful in the sense that it takes care of multithreading very well by doing complex thread operations .
+2) Retrofit : 
    To interact with the HTTP Restful Apis , it a powerful because it also as ButterKnife depends on 
    the Auto Generated code by implementing the Annotation proccess logic
-5) Glide : 
+3) ButterKnife : 
+   It's permit to me to bind the XML views with there connected fields in there classes ,
+   depends on the Auto Generated code by implementing the Annotation proccess logic .
+4) Javax :
+   It's a utils annotaions , i used it to extract the POJO classes from a JSON responce .
+5) GooglePlayServices :
+   To interact with Google Apis , i used it to show the google autocomplete locations screen .
+6) Glide : 
    Handling the images downloading with a many utils embedded inside, The most important thing that this
    library also handles the Out Of Memory issues .
-6) Mockito :
+7) Mockito :
    A unit test library that use also the annotaion proccessing concept with ability to mock objects from the android sdk classes.
-7) Robolectric :
+8) Robolectric :
    A unit test library that use also the annotaion proccessing concept with ability to shadow objects from the android sdk classes
    , another important thing is handling some Android Sdk classes over Mockito like *putExtra* which is not mocked by Mockito .
-7) Junit :
+9) Junit :
    The Default unit test library from Android.
 
 **Project Folders :**
