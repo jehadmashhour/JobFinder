@@ -9,6 +9,9 @@ import com.example.jehad.jobfinder.data.rest.base.BaseProviderStrategiesUtils;
 import com.example.jehad.jobfinder.ui.main.viewholder.GitHubViewHolder;
 import com.example.jehad.jobfinder.ui.main.viewholder.SearchGovViewHolder;
 
+/**
+ * The responsible class on the provider list strategies
+ */
 public class ProviderStrategies extends BaseProviderStrategiesUtils {
 
     /**
